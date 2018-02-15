@@ -1,4 +1,4 @@
-package helloworld;
+package FirstSample;
 
 import java.util.Date;
 
@@ -14,7 +14,7 @@ public class Loan {
 		this(7.5, 30, 100000);
 	}
 
-	public Loan(double annualInterestRate, int numberOfYears, int loanAmount) {
+	public Loan(double annualInterestRate, int numberOfYears, double loanAmount) {
 		// TODO Auto-generated constructor stub
 		this.annualInterestRate = annualInterestRate;
 		this.numberOfYears = numberOfYears;
