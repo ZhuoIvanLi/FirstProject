@@ -10,6 +10,7 @@ import java.awt.event.MouseMotionAdapter;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 public class ButtonEvent extends JFrame {
 
@@ -21,8 +22,12 @@ public class ButtonEvent extends JFrame {
 		// Add two buttons to Frame
 		JButton jbtOK = new JButton("OK");
 		JButton jbtCancel = new JButton("Cancel");
-		add(jbtOK);
-		add(jbtCancel);
+		jbtOK.setHorizontalAlignment(SwingConstants.LEFT);
+
+		JPanel jp = new JPanel();
+
+		jp.add(jbtOK);
+		jp.add(jbtCancel);
 
 		// register listeners
 		OKListenerClass listener1 = new OKListenerClass();
@@ -32,8 +37,8 @@ public class ButtonEvent extends JFrame {
 
 		MoveMessagePanel p = new MoveMessagePanel("Mouse Motion Listener");
 
-		setLayout(new BorderLayout());
-		add(p);
+		add(p, BorderLayout.CENTER);
+		add(jp, BorderLayout.SOUTH);
 	}
 
 	public static void main(String[] arg) {
